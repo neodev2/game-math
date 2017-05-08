@@ -5,10 +5,6 @@
         <meta charset="UTF-8"> 
     </head>
     <body>
-        <button id="button">button</button>
-        <div>Correct answers in these cases:</div>
-        <div>3/0: Infinity</div>
-        <div>0/0: NaN</div>
         
         <script>
         function msToTime(s) {
@@ -34,7 +30,7 @@
         var totalAnswers = 0;
 
         var d1 = Date.now();
-        button.onclick = function(){
+        function newRound(){
             var d2 = Date.now();
             var output = 'ended in: ' + msToTime(d2 - d1) + '. Total answers: '+totalAnswers;
             console.log(output);
@@ -80,7 +76,7 @@
                     totalAnswers++;
                     quiz();
                 }else{
-                    button.click();
+                    newRound();
                 }
             }, 2000);
 
