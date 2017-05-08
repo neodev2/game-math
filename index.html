@@ -45,13 +45,12 @@
 
             var opArray = ['+','-','*','/'];
             var aArray = [0,1,2,3];
-            var bArray = [0];
+            var bArray = [0,1,2,3];
 
             var op = opArray[Math.floor(Math.random()*opArray.length)];
             var a = aArray[Math.floor(Math.random()*aArray.length)];
             var b = bArray[Math.floor(Math.random()*bArray.length)];
             console.log(a, op, b);
-            console.log(typeof a, typeof op, typeof b);
 
             var question = a + op + b;
             var correctAnswer = b == 0 ? '0' : eval(question).toFixed(1).replace(/\.0$/,'');
@@ -74,7 +73,6 @@
             }
 
             console.log('correctAnswer: '+correctAnswer+', enteredAnswer: '+_prompt+' ('+_promptText+')');
-            console.log('correctAnswer: '+typeof correctAnswer+', enteredAnswer: '+typeof _prompt);
             read(_promptText);
 
             setTimeout(function(){
