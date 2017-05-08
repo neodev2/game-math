@@ -53,7 +53,7 @@
             console.log(a, op, b);
 
             var question = a + op + b;
-            var correctAnswer = b == 0 ? '0' : eval(question).toFixed(1).replace(/\.0$/,'');
+            var correctAnswer = op == '/' && b == 0 ? '0' : eval(question).toFixed(1).replace(/\.0$/,'');
 
 
             read(question);
